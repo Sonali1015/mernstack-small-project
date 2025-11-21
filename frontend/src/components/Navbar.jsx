@@ -5,7 +5,6 @@ import {
   HStack,
   Text,
   useColorMode,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -17,24 +16,19 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Container
-      maxW="1140px"
-      px={4}
-      bg={useColorModeValue("gray.100", "gray.900")}
-    >
+    <Container maxW={"1140px"} pt={6}>
       <Flex
         h={16}
-        alignItems="center"
-        justifyContent="space-between"
-        flexDir="row" // Always row
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        flexDir={"row"}
       >
-        {/* Left: Title */}
         <Text
-          bgGradient="linear(to-r, teal.500, green.500)"
-          textTransform="uppercase"
-          bgClip="text"
-          fontSize="4xl"
-          fontWeight="bold"
+          bgGradient={"linear(to-r, teal.500, green.500)"}
+          textTransform={"uppercase"}
+          bgClip={"text"}
+          fontSize={"4xl"}
+          fontWeight={"bold"}
         >
           <Link to="/">Product Store</Link>
         </Text>
